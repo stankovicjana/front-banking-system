@@ -1,0 +1,53 @@
+<!-- cards.component.html -->
+<div class="cards-container">
+  <h3 class="section-title">
+    <mat-icon>credit_score</mat-icon>
+    Kartice
+  </h3>
+
+  <div
+    *ngFor="let card of cards"
+    class="card-card"
+    [class.selected]="selectedCard?.id === card.id"
+    (click)="selectCard(card)"
+  >
+    <div class="card-info">
+      <mat-icon class="card-icon">credit_card</mat-icon>
+      <div class="details">
+        <div>Broj kartice:</div>
+        <div class="card-number">{{ card.number }}</div>
+        <div class="card-number">{{ card.name }}</div>
+      </div>
+    </div>
+    <div class="card-details">
+      <div class="card-type">
+        <div>Tip kartice:</div>
+        <div>{{ card.cardType }}</div>
+      </div>
+      <div class="card-limit">
+        <div>Limit:</div>
+        <div>{{ card.limit | number : "1.2-2" }} RSD</div>
+      </div>
+      <div class="validUntil">
+        <div>Važi do:</div>
+        <div>{{ card.validUntil }}</div>
+      </div>
+      <div class="issueDate">
+        <div>Datum izdavanja:</div>
+        <div>{{ card.issueDate }}</div>
+      </div>
+      <div class="blocked" (click)="toggleBlock(card)" style="cursor: pointer">
+        <div>Status:</div>
+        <div
+          [ngClass]="{
+            'blocked-yes': card.blocked,
+            'blocked-no': !card.blocked
+          }"
+        >
+          {{ card.blocked ? "Blokirana" : "Aktivna" }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="blockMessage" class="block-message">{{ blockMessage }}</div>
+  </div>
+</div>

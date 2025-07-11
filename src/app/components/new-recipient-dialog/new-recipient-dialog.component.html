@@ -1,0 +1,36 @@
+<h2 class="dialog-title">Novi primalac</h2>
+<div style="padding: 20px;">
+  <form [formGroup]="recipientForm" class="recipient-form">
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>Ime primaoca</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Račun primaoca</mat-label>
+        <input matInput formControlName="recipientAccount" required />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="full-width">
+      <mat-label>Tip primaoca</mat-label>
+      <mat-select formControlName="recipientType" required>
+        <mat-option value="INDIVIDUAL">Fizičko lice</mat-option>
+        <mat-option value="LEGAL">Pravno lice</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="dialog-actions">
+      <button mat-stroked-button color="warn" (click)="onCancel()">
+        Otkaži
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="onSubmit()">
+        Sačuvaj
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,88 @@
+<div class="cards-container">
+  <h3 class="section-title">
+    <mat-icon>dashboard</mat-icon>
+    Početna
+  </h3>
+  <form
+    [formGroup]="transferForm"
+    (ngSubmit)="submit()"
+    class="transfer-form-container"
+  >
+    <div class="header">
+      <div class="account-info">
+        <div class="balance-label">Sa računa:</div>
+        <h3>{{ account?.type }}</h3>
+        <div class="account-number">{{ account?.accountNumber }}</div>
+      </div>
+      <div class="balance-info">
+        <div class="balance-label">Raspoloživo:</div>
+        <div class="balance-amount">
+          {{ account?.balance }} {{ account?.currency }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="recipient-row">
+        <mat-form-field class="recipient-select">
+          <mat-label>Primalac</mat-label>
+          <mat-select [(value)]="selectedRecipient">
+            <mat-option
+              *ngFor="let recipient of recipients"
+              [value]="recipient"
+            >
+              {{ recipient.name }} – {{ recipient.recipientAccount }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- Ikonica za dodavanje primaoca -->
+        <button
+          class="small-icon-button"
+          mat-icon-button
+          (click)="openNewRecipientForm()"
+          aria-label="Dodaj novog primaoca"
+        >
+          <mat-icon>person_add</mat-icon>
+        </button>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Šifra plaćanja</mat-label>
+        <mat-select formControlName="paymentCode">
+          <mat-option value="289"
+            >289 - Transakcije po nalogu građana</mat-option
+          >
+          <mat-option value="289a">289a - Ostalo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Svrha plaćanja</mat-label>
+        <input matInput formControlName="paymentPurpose" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Iznos</mat-label>
+        <input matInput formControlName="amount" type="number" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Model</mat-label>
+        <input matInput formControlName="model" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Poziv na broj</mat-label>
+        <input matInput formControlName="referenceNumber" />
+      </mat-form-field>
+    </div>
+
+    <button
+      (click)="submit()"
+      [disabled]="!selectedRecipient || transferForm.invalid"
+    >
+      Pošalji
+    </button>
+  </form>
+</div>

@@ -1,0 +1,59 @@
+.credits-container {
+  padding: 20px;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .credit-card {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.border-highlight {
+      border-color: #8b0000;
+    }
+
+    .credit-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      button {
+        width: 100px;
+      }
+    }
+  }
+}
+
+button {
+  background-color: #d55b5b;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-width: 10px;
+  min-width: 120px;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}

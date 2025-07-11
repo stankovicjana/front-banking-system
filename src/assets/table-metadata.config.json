@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "table_name": "TEST",
+    "columns": [
+      {
+        "id": 1,
+        "header": "Name",
+        "field": "name",
+        "hasFilter": true,
+        "filter": "text",
+        "type": "basic"
+      },
+      {
+        "id": 2,
+        "header": "Country",
+        "field": "country",
+        "hasFilter": true,
+        "filter": "text",
+        "type": "basic"
+      },
+      {
+        "id": 3,
+        "header": "Agent",
+        "field": "agent",
+        "hasFilter": true,
+        "filter": "text",
+        "type": "basic"
+      },
+      {
+        "id": 4,
+        "header": "Date",
+        "field": "date",
+        "hasFilter": true,
+        "filter": "date",
+        "type": "basic"
+      },
+      {
+        "id": 5,
+        "header": "Status",
+        "field": "status",
+        "hasFilter": true,
+        "filter": "status",
+        "statusValues": ["unqualified", "qualified"],
+        "type": "basic"
+      },
+      {
+        "id": 6,
+        "header": "Verified",
+        "field": "verified",
+        "hasFilter": true,
+        "filter": "boolean",
+        "type": "basic"
+      },
+
+      {
+        "id": 7,
+        "header": "Actions",
+        "field": "",
+        "hasFilter": false,
+        "type": "action",
+        "actions": [
+          { "icon": "pi pi-pencil", "actionName": "Edit" },
+          { "icon": "pi pi-trash", "actionName": "Delete" }
+        ]
+      }
+    ],
+    "dataKey": "name",
+    "showJumpToPageDropdown": false,
+    "showJumpToPageInput": false,
+    "globalFilterFields": ["name", "country", "agent"],
+    "filterDelay": 0,
+    "resizableColumns": true,
+    "reorderableColumns": false,
+    "loading": false,
+    "showLoader": false
+  }
+]

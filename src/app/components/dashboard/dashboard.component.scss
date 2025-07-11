@@ -1,0 +1,163 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #2c2e3e;
+  color: white;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 60px;
+  background-color: #d9534f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  font-weight: bold;
+}
+
+.router-content {
+  padding-top: 50px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+}
+
+.bank-logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.bank-logo img {
+  width: 70px;
+  height: auto;
+}
+
+.bank-logo h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.bank-logo span {
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.avatar {
+  background-color: #c60000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu li i {
+  margin-right: 15px;
+}
+
+.menu li.active,
+.menu li:hover {
+  background-color: #790000;
+  color: black;
+}
+
+.bottom-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-top: 1px solid #444;
+}
+.topbar {
+  position: fixed;
+  left: 240px; /* širina sidebar-a */
+  top: 0;
+  right: 0;
+  height: 64px;
+  background-color: #d55b5b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.user-section .welcome-text {
+  font-weight: bold;
+  color: #2f313c;
+  font-size: 16px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #2f313c;
+  transition: color 0.2s ease;
+}
+
+.icons i:hover {
+  color: black;
+}
+
+.logout {
+  font-weight: bold;
+}
+.items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+}

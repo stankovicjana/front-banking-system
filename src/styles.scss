@@ -1,0 +1,238 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.mat-button-ripple {
+  animation: ripple 600ms linear;
+  border-radius: 20px !important;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: var(--main-content-background-color1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-content-text-color);
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.mat-tab-label-content {
+  color: var(--main-content-text-color);
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #f2a51a;
+}
+
+.mat-tab-label-container {
+  margin-bottom: 8px;
+}
+
+.mat-tab-list {
+  border-bottom: 0.5px solid #43567e49;
+}
+
+.mat-tab-nav-bar,
+.mat-tab-header {
+  border-bottom: none !important;
+}
+
+.error-snackbar {
+  border: #0d172a;
+  color: var(--main-content-text-color);
+  width: 300px;
+}
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #f6f9fe;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+::ng-deep mat-form-field {
+  background-color: rgb(46, 5, 5);
+  border-radius: 12px;
+  padding: 2px 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  font-family: "Segoe UI", sans-serif;
+  margin: 5px 0;
+
+  .mat-form-field-wrapper {
+    padding: 0 !important;
+  }
+
+  .mat-form-field-outline {
+    border-radius: 12px !important;
+  }
+
+  .mat-form-field-flex {
+    border-radius: 12px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-width: 1px;
+    border-color: #ddd;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus-within {
+    border: none;
+    box-shadow: 0 0 0 2px #1976d2;
+  }
+}
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #77000e solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #77000e;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+::ng-deep .mat-mdc-dialog-container {
+  width: 500px !important; 
+  max-width: 90vw;
+  height: auto;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.account-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .balance-placeholder {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+
+    mat-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .action-button {
+    background-color: #d55b5b;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: #d55b5b;
+    }
+  }
+}

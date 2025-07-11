@@ -1,0 +1,49 @@
+<div class="dashboard-layout">
+  <div class="sidebar">
+  <div class="bank-logo">
+    <img src="assets/images/download.jpg" alt="Raiffeisen logo" />
+    <h2>UniCredit <span>BANK</span></h2>
+  </div>
+  <ul class="menu">
+    <li>
+      <a routerLink="/admin/register" class="items">
+        <mat-icon>account_circle</mat-icon> Registruj korisnika
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/manage-credits" class="items">
+        <mat-icon>account_balance_wallet</mat-icon> Upravljaj kreditima
+      </a>
+    </li>
+  </ul>
+
+  <div class="bottom-icons">
+    <i class="material-icons">mail</i>
+    <i class="material-icons">facebook</i>
+    <i class="material-icons">help_outline</i>
+  </div>
+</div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="user-section">
+        <span class="welcome-text">Dobrodošli, {{ userName }}</span>
+      </div>
+      <div class="icons">
+        <i class="material-icons">mail</i>
+        <i class="material-icons">person</i>
+        <i class="material-icons logout" (click)="logout()">logout</i>
+      </div>
+    </div>
+     <!-- Routed Component -->
+    <div class="router-content">
+      <router-outlet></router-outlet>
+    </div>
+
+   
+  </div>
+
+
+</div>

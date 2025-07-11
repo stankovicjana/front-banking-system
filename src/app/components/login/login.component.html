@@ -1,0 +1,21 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-card">
+    <h2 class="login-title">Welcome</h2>
+
+    <mat-form-field appearance="fill" class="login-input">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="username" type="text" required />
+      <mat-error *ngIf="username.invalid">{{ getUsernameErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="login-input">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" required />
+      <mat-error *ngIf="password.invalid">{{ getPasswordErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" class="login-button" type="submit">
+      Login
+    </button>
+  </form>
+</div>

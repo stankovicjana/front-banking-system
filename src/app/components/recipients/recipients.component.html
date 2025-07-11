@@ -1,0 +1,41 @@
+<div class="recipients-container">
+  <div class="recipients-header">
+    <h3 class="section-title">
+      <mat-icon>group</mat-icon>
+      Primaoci plaćanja
+    </h3>
+    <button class="small-icon-button" mat-mini-fab color="primary" (click)="addRecipient()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div
+    *ngFor="let recipient of recipients"
+    class="recipient-card"
+    [class.selected]="recipient?.id === recipient.id"
+    (click)="selectRecipient(recipient)"
+  >
+    <div class="recipient-info">
+      <mat-icon class="recipient-icon">person</mat-icon>
+      <div class="details">
+        <div>Ime primaoca:</div>
+        <div class="recipient-name">{{ recipient.name }}</div>
+        <div>Račun:</div>
+        <div class="recipient-account">{{ recipient.recipientAccount }}</div>
+
+        <div class="recipient-details">
+          <div class="recipient-type">
+            <div>Tip primaoca:</div>
+            <div>{{ recipient.recipientType }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="small-icon-button" mat-mini-fab color="primary" (click)="editRecipient(recipient)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

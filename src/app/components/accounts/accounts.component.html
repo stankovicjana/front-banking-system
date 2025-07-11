@@ -1,0 +1,75 @@
+<div class="accounts-wrapper">
+  <h3 class="section-title">
+    <mat-icon>trending_up</mat-icon>
+    Pregled stanja
+  </h3>
+
+  <!-- Kartice računa -->
+  <div *ngFor="let acc of accounts" class="account-card">
+    <div class="account-info">
+      <mat-icon class="icon">credit_card</mat-icon>
+      <div class="details">
+        <div class="account-type">{{ acc.type }}</div>
+        <div class="account-number">{{ acc.accountNumber }}</div>
+      </div>
+    </div>
+
+    <div class="account-actions">
+      <div class="balance-placeholder" (click)="toggleBalance(acc)">
+        <mat-icon>
+          {{ acc.showBalance ? "visibility_off" : "visibility" }}
+        </mat-icon>
+        <span *ngIf="!acc.showBalance">Prikaži stanje</span>
+        <span *ngIf="acc.showBalance">
+          {{ acc.balance | number : "1.2-2" }} {{ acc.currency }}
+        </span>
+      </div>
+
+      <button class="action-button" (click)="addNewPayment(acc)">
+        {{
+          acc.type.toLowerCase().includes("devizni") ? "MENJAČNICA" : "PLAĆANJE"
+        }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Zaglavlje sekcije za transakcije -->
+  <div class="transaction-header">
+    <mat-icon>list</mat-icon>
+    <span>Lista transakcija po računu</span>
+    <button class="filter-btn" (click)="toggleFilter()">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+  </div>
+
+  <!-- Forma za filtriranje -->
+  <div class="filter-form" *ngIf="showFilter">
+    <input type="date" [(ngModel)]="filter.date" placeholder="Datum" />
+    <input
+      type="text"
+      [(ngModel)]="filter.type"
+      placeholder="Tip transakcije"
+    />
+    <input type="number" [(ngModel)]="filter.amount" placeholder="Iznos" />
+    <input type="text" [(ngModel)]="filter.recipient" placeholder="Primalac" />
+    <button (click)="applyFilter()">Primeni</button>
+  </div>
+
+  <!-- Lista transakcija -->
+  <div *ngFor="let tr of filteredTransactions" class="transaction-item">
+    <div class="avatar-circle">
+      {{ tr.recipientName.charAt(0).toUpperCase() }}
+    </div>
+    <div class="details">
+      <div class="recipient">{{ tr.recipientName }}</div>
+      <div class="date">{{ tr.executionDate }}</div>
+      <div class="purpose">{{ tr.paymentPurpose }}</div>
+    </div>
+    <div
+      class="amount"
+      [ngClass]="{ positive: tr.transactionType === 'uplata' }"
+    >
+      {{ tr.amount | number : "1.2-2" }} RSD
+    </div>
+  </div>
+</div>

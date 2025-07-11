@@ -1,0 +1,69 @@
+<div class="dashboard-layout">
+  <div class="sidebar">
+  <div class="bank-logo">
+    <img src="assets/images/download.jpg" alt="Raiffeisen logo" />
+    <h2>UniCredit <span>BANK</span></h2>
+  </div>
+
+   <div class="user-info">
+      <div class="avatar">{{ initials }}</div>
+      <div class="username">{{ userFullName }}</div>
+    </div>
+  <ul class="menu">
+    <li>
+      <a routerLink="/home" class="items">
+        <mat-icon>home</mat-icon> Početna
+      </a>
+    </li>
+    <li>
+      <a routerLink="/cards" class="items">
+        <mat-icon>credit_card</mat-icon> Kartice
+      </a>
+    </li>
+    <li>
+      <a routerLink="/accounts" class="items">
+        <mat-icon>account_balance_wallet</mat-icon> Računi
+      </a>
+    </li>
+    <li>
+      <a routerLink="/credits" class="items">
+        <mat-icon>account_balance</mat-icon> Krediti
+      </a>
+    </li>
+    <li>
+      <a routerLink="/recipients" class="items">
+        <mat-icon>account_circle</mat-icon> Primaoci plaćanja
+      </a>
+    </li>
+  </ul>
+
+  <div class="bottom-icons">
+    <i class="material-icons">mail</i>
+    <i class="material-icons">facebook</i>
+    <i class="material-icons">help_outline</i>
+  </div>
+</div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="user-section">
+        <span class="welcome-text">Dobrodošli, {{ userName }}</span>
+      </div>
+      <div class="icons">
+        <i class="material-icons">mail</i>
+        <i class="material-icons">person</i>
+        <i class="material-icons logout" (click)="logout()">logout</i>
+      </div>
+    </div>
+     <!-- Routed Component -->
+    <div class="router-content">
+      <router-outlet></router-outlet>
+    </div>
+
+   
+  </div>
+
+
+</div>

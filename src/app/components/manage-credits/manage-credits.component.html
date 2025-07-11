@@ -1,0 +1,22 @@
+<div class="credits-container">
+  <h2>
+    <mat-icon>account_balance_wallet</mat-icon>
+    Krediti
+  </h2>
+
+  <div *ngFor="let credit of credits" class="credit-card" [ngClass]="{'border-highlight': credit.creditStatus === 'UNPROCESSED'}">
+    <div class="credit-info">
+      <div><strong>Iznos:</strong> {{ credit.amount | number:'1.0-0' }} RSD</div>
+      <div><strong>Rok otplate:</strong> {{ credit.repaymentPeriod }} meseci</div>
+      <div><strong>Kamata:</strong> {{ credit.interestRate }}%</div>
+      <div><strong>Status:</strong> {{ credit.creditStatus }}</div>
+      <div><strong>Rok do:</strong> {{ credit.approvedUntil }}</div>
+      <div><strong>Podnet:</strong> {{ credit.request.submissionDate }}</div>
+    </div>
+
+    <div class="actions" *ngIf="credit.creditStatus === 'UNPROCESSED'">
+      <button mat-button color="primary" (click)="updateStatus(credit.id!, 'APPROVED')">Odobri</button>
+      <button mat-button color="warn" (click)="updateStatus(credit.id!, 'REJECTED')">Odbij</button>
+    </div>
+  </div>
+</div>

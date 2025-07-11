@@ -11,15 +11,6 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { RegisterComponent } from './components/register/register.component';
 import { ManageCreditsComponent } from './components/manage-credits/manage-credits.component';
 
-/*export const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'cards', component: CardsComponent },
-  { path: 'credits', component: CreditsComponent },
-  { path: 'accounts', component: AccountsComponent },
-];*/
-
 export const routes: Routes = [
   {
     path: '',

@@ -1,0 +1,89 @@
+.credit-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+mat-form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+.submit-section {
+  button {
+    background-color: #d55b5b;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-width: 10px;
+    min-width: 120px;
+    height: 50px;
+  }
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2f313c;
+  margin-bottom: 20px;
+  margin-right: 8px;
+}
+
+.section-title .mat-icon {
+  margin-right: 8px;
+}
+.credit-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.slider-section,
+.monthly-obligation,
+.insurance,
+.submit-section,
+.info {
+  margin: 2rem 0;
+}
+
+.slider-value,
+.obligation-value {
+  font-size: 20px;
+  color: #0077aa;
+  margin-bottom: 0.5rem;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+mat-card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.submit-section {
+  text-align: center;
+}
+.slider-section {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+mat-slider {
+  width: 100%;
+  display: block;
+}
+.credits-card.selected {
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #790000;
+}

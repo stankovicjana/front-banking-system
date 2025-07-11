@@ -1,0 +1,115 @@
+.recipients-container {
+  padding: 20px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.recipient-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  &.selected {
+    border: 2px solid #790000;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .recipient-info {
+    display: flex;
+    align-items: center;
+
+    .recipient-icon {
+      font-size: 32px;
+      margin-right: 16px;
+      color: #790000;
+    }
+
+    .details {
+      .recipient-name {
+        font-weight: bold;
+      }
+
+      .recipient-account {
+        color: #555;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .recipient-details {
+    margin-top: 10px;
+
+    .recipient-type {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+}
+.recipient-card {
+  background: white;
+  border: 2px solid #790000;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipient-info {
+  color: #1c1c1c;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+
+  button {
+    width: 36px;
+    height: 36px;
+  }
+
+  mat-icon {
+    font-size: 20px;
+  }
+}
+.recipients-header {
+  display: flex;
+  justify-content: space-between;
+}
+.small-icon-button {
+  border: none;
+  background-color: #c24141;
+  border-radius: 8px;
+  padding: 4px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+  min-width: 20px;
+}
+::ng-deep .mat-mdc-select-arrow svg {
+  position: sticky!important;
+}

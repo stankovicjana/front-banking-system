@@ -1,0 +1,96 @@
+{
+  "DashboardConfiguration": {
+    "MainTitle": "Test app",
+    "MainLogoIcon": "../assets/images/logo.png",
+    "Navigation": {
+      "Category": [
+        {
+          "Title": "Main view",
+          "Icon": "add",
+          "Security": "All",
+          "URL": "/dashboard"
+        },
+        {
+          "Title": "Sub menu panel",
+          "Icon": "https://cdn-icons-png.flaticon.com/512/7799/7799536.png",
+          "Security": "All",
+          "URL": "/login",
+          "SubCategory": [
+            {
+              "Title": "Cat 1",
+              "Icon": "upload",
+              "Security": "All",
+              "URL": "/selection1"
+            },
+            {
+              "Title": "Cat 1",
+              "Icon": "upload",
+              "Security": "All",
+              "URL": "/selection1"
+            },
+            {
+              "Title": "Cat 1",
+              "Icon": "upload",
+              "Security": "All",
+              "URL": "/selection1"
+            },
+            {
+              "Title": "Cat 1",
+              "Icon": "upload",
+              "Security": "All",
+              "URL": "/selection1"
+            }
+          ]
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        },
+        {
+          "Title": "Admin panel",
+          "Icon": "add",
+          "Security": "Admin",
+          "URL": "/lal"
+        }
+      ]
+    }
+  }
+}

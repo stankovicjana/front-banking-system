@@ -1,0 +1,48 @@
+<div class="register-container">
+  <h2>Registracija korisnika</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Korisničko ime</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Lozinka</mat-label>
+      <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ime</mat-label>
+      <input matInput formControlName="firstName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Prezime</mat-label>
+      <input matInput formControlName="lastName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>JMBG</mat-label>
+      <input matInput formControlName="jmbg" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Adresa</mat-label>
+      <input matInput formControlName="address" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Telefon</mat-label>
+      <input matInput formControlName="phone" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">
+      Registruj korisnika
+    </button>
+  </form>
+</div>

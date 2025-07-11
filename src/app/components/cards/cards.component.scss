@@ -1,0 +1,133 @@
+.cards-wrapper {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+
+.card-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+/*
+.card-item {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 220px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-item.selected {
+  border: 2px solid #1976d2;
+  background-color: #e3f2fd;
+}
+*/
+
+.transactions-section {
+  margin-top: 32px;
+}
+
+.transaction-item {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.card-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-card.selected {
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #790000;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  font-size: 28px;
+  color: #444;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.details {
+  font-size: 14px;
+
+  div:first-child {
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .card-number {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+  }
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  font-size: 14px;
+
+  div > div:first-child {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  div > div:last-child {
+    font-weight: 500;
+    color: #333;
+  }
+}
+.blocked-yes {
+  color: red;
+  font-weight: bold;
+}
+.blocked-no {
+  color: green;
+  font-weight: bold;
+}
+
+.block-message {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: end;
+  color: #290000;
+  font-weight: 500;
+}
+.cards-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 6px;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2f313c;
+  margin-bottom: 20px;
+  margin-right: 8px;
+}
+
+.section-title .mat-icon{
+  margin-right: 8px;
+}

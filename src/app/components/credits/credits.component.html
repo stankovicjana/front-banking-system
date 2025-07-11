@@ -1,0 +1,84 @@
+<div class="credit-container">
+  <h3 class="section-title">
+    <mat-icon>wallet</mat-icon>
+    Online keš kredit
+  </h3>
+  <section class="intro">
+    <h3>100% online</h3>
+    <p>Bez odlaska u filijalu čak ni za potpisivanje dokumentacije.</p>
+  </section>
+
+  <section class="slider-section">
+    <h4>Želim kredit u iznosu od</h4>
+    <div class="slider-value">{{ creditAmount | number }} RSD</div>
+    <mat-slider [min]="60000" [max]="1200000" [step]="10000">
+      <input matSliderThumb [(ngModel)]="creditAmount" />
+    </mat-slider>
+
+    <div class="slider-labels">
+      <span>60.000 RSD</span>
+      <span>1.200.000 RSD</span>
+    </div>
+  </section>
+
+  <section class="slider-section">
+    <h4>Želim da otplatim u periodu od</h4>
+    <div class="slider-value">{{ repaymentPeriod }} meseci</div>
+    <mat-slider [min]="13" [max]="70" [step]="1">
+      <input matSliderThumb [(ngModel)]="repaymentPeriod" />
+    </mat-slider>
+
+    <div class="slider-labels">
+      <span>13 meseci</span>
+      <span>70 meseci</span>
+    </div>
+  </section>
+
+  <section class="monthly-obligation">
+    <h4>Moja mesečna obaveza</h4>
+    <div class="obligation-value">
+      {{ calculateMonthlyPayment() | number : "1.0-0" }} RSD
+    </div>
+  </section>
+
+  <section class="insurance">
+    <mat-card>
+      <mat-card-title>Osiguranje kredita</mat-card-title>
+      <mat-card-content>
+        <p>
+          Izaberite sigurnost za sebe i svoje najbliže u slučaju nepredviđenih
+          okolnosti kao što su gubitak zaposlenja ili nesrećni slučaj.
+        </p>
+        <a class="more-info" href="#">Saznaj više</a>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <div class="submit-section">
+    <button mat-raised-button color="primary" (click)="submit()">
+      Podnesi zahtev online<br />
+      <small>(odgovor u 8 dana)</small>
+    </button>
+  </div>
+  <section class="credit-list" *ngIf="creditRequests?.length">
+    <h4 style="margin-top: 40px">Tvoji zahtevi za kredit</h4>
+
+    <mat-card class="credits-card"
+      *ngFor="let request of creditRequests"
+      style="margin-bottom: 16px"
+    >
+      <mat-card-title>
+        Kredit u iznosu od {{ request.amount | number }} RSD
+      </mat-card-title>
+      <mat-card-content>
+        <p>Rok otplate: {{ request.repaymentPeriod }} meseci</p>
+        <p>Kamata: {{ request.interestRate }}%</p>
+        <p>
+          Status: <strong>{{ request.creditStatus }}</strong>
+        </p>
+        <p>Važi do: {{ request.approvedUntil | date : "dd.MM.yyyy." }}</p>
+        <p>Zahtev kreiran: {{ request.request.submissionDate | date : "dd.MM.yyyy." }}</p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>
