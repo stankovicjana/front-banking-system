@@ -1,0 +1,45 @@
+<!-- Floating button -->
+<button class="chat-fab" (click)="toggle()" aria-label="AI asistent">
+  <span>💬</span>
+</button>
+
+<!-- Overlay + panel -->
+<div class="chat-overlay" *ngIf="isOpen" (click)="isOpen=false"></div>
+
+<div class="chat-panel" *ngIf="isOpen" (click)="$event.stopPropagation()">
+  <div class="chat-header">
+    <div class="title">AI asistent</div>
+    <button class="icon-btn" (click)="isOpen=false" aria-label="Zatvori">✕</button>
+  </div>
+
+  <div class="chat-body" id="chat-scroll">
+    <div *ngFor="let m of messages" class="msg" [class.user]="m.role==='user'" [class.assistant]="m.role==='assistant'">
+      <div class="bubble">
+        <p>{{ m.text }}</p>
+        <small *ngIf="m.model">Model: {{m.model}} · {{m.latencySec}}s</small>
+
+        <!-- prikaz izvora ispod odgovora asistenta -->
+        <div class="sources" *ngIf="m.role==='assistant' && m.sources?.length">
+          <div class="src-title">📎 Izvori:</div>
+          <ul>
+            <li *ngFor="let s of m.sources; index as i">
+              [{{ i + 1 }}] {{ s.source || 'dokument' }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="typing">asistent kuca…</div>
+  </div>
+
+  <div class="chat-input">
+    <input
+      [(ngModel)]="input"
+      (keyup.enter)="send()"
+      [disabled]="loading"
+      placeholder="Postavi pitanje…"
+      aria-label="Unesi pitanje" />
+    <button (click)="send()" [disabled]="loading || !input.trim()">Pošalji</button>
+  </div>
+</div>

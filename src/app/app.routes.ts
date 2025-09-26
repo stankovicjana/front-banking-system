@@ -10,6 +10,7 @@ import { RecipientsComponent } from './components/recipients/recipients.componen
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ManageCreditsComponent } from './components/manage-credits/manage-credits.component';
+import { ChatWidgetComponent } from './components/chat-widget/chat-widget.component';
 
 /*export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },

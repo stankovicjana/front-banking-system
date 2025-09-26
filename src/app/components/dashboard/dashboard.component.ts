@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../auth/auth.service';
 import { MatIconModule } from '@angular/material/icon';
+import { ChatWidgetComponent } from "../chat-widget/chat-widget.component";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [MatIconModule, RouterModule, MatIconModule],
+  imports: [MatIconModule, RouterModule, MatIconModule, ChatWidgetComponent],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })

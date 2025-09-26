@@ -1,0 +1,25 @@
+@startuml test
+left to right direction
+actor Klijent as User
+
+rectangle "Web aplikacija" {
+  usecase "Prijava" as UC_Login
+  usecase "Pregled stanja\nna računu" as UC_Balance
+  usecase "Blokada kartice" as UC_Block
+  usecase "Chat sa AI asistentom" as UC_Chat
+  usecase "Podnošenje zahteva\nza kredit" as UC_Loan
+}
+
+User --> UC_Login
+User --> UC_Balance
+User --> UC_Block
+User --> UC_Chat
+User --> UC_Loan
+
+note right of UC_Chat
+  RAG + LLM-as-a-Judge:
+  - pretraga (Azure AI Search)
+  - odgovori (Azure GPT, Gemini)
+  - sudija bira bolji odgovor
+end note
+@enduml
